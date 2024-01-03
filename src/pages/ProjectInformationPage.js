@@ -1,7 +1,18 @@
+import styles from "./ProjectInformationPage.module.css";
+
 function ProjectInformation() {
   return (
     <>
-      <p>나는 프로젝트 정보 페이지다! 서린이가 만들어야 하는 것</p>
+      <div className={styles.header}>
+        <img alt="projectImg" src={require(`../assets/project_img.jpg`)} />
+        <div className={styles.headerInfo}>
+          <h1>프로젝트명</h1>
+          <p>사용자 정보</p>
+        </div>
+      </div>
+      <div className={styles.main}>
+        <div className={styles.section}></div>
+      </div>
     </>
   );
 }

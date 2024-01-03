@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.headerInfo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.header > img {
+  width: 500px;
+  margin-top: 50px;
+  margin-right: 100px;
+}
+
+.main {
+
+}
+
+.section {
+  
+}

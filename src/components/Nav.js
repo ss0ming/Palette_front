@@ -1,13 +1,22 @@
+//eslint-disable-next-line
 import { Link, NavLink } from "react-router-dom";
+import styles from "./Nav.module.css";
 
 function Nav() {
   return (
-    <div className="navbar">
+    <div className={styles.navbar}>
       <ul>
         <li>
-          <Link to="/">홈</Link>
+          <img
+            className={styles.Logo}
+            alt="Logo"
+            src={require(`../assets/paletteLogo.png`)}
+          />
         </li>
         <li>
+          <Link to="/">Palette</Link>
+        </li>
+        <li className={styles.navProject}>
           <Link to="/ProjectList">프로젝트</Link>
         </li>
         <li>
