@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.ProjectCategory {
+  display: flex;
+  flex-direction: row;
+  padding-left: 30px;
+  width: 656px;
+  justify-content: space-between;
+}
