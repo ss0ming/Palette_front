@@ -1,4 +1,10 @@
-.header {
+.projectInformation {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 100px;
+}
+
+.projectInfoHeader {
   display: flex;
   justify-content: center;
 }
@@ -9,13 +15,39 @@
   margin-top: 50px;
 }
 
-.header > img {
+.headerInfo > .title {
+  display: flex;
+}
+
+
+.title > img {
+  width: 25px;
+  height: 25px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.recruitmentStatus {
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  background-color: #C2A4FF;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 50%; /*애매함*/
+}
+
+.recruitmentStatus > p {
+  text-align: center;
+}
+
+.projectInfoHeader > img {
   width: 500px;
   margin-top: 50px;
   margin-right: 100px;
 }
 
-.main {
+.projectInfoMain {
   margin: 40px;
 }
 
