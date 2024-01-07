@@ -15,19 +15,19 @@
   margin-top: 50px;
 }
 
-.headerInfo > .title {
+.headerInfo > .headerInfoTitle {
   display: flex;
 }
 
 
-.title > img {
+.headerInfoTitle > img {
   width: 25px;
   height: 25px;
   margin-top: 5px;
   margin-left: 10px;
 }
 
-.recruitmentStatus {
+.recru {
   display: flex;
   justify-content: center;
   width: 80px;
@@ -37,7 +37,7 @@
   margin-left: 50%; /*애매함*/
 }
 
-.recruitmentStatus > p {
+.recru > p {
   text-align: center;
 }
 
@@ -59,6 +59,24 @@
   margin-bottom: 10px;
 }
 
-.content {
+.contents {
   margin-top: 10px;
+}
+
+.period {
+  font-size: 21px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.recruitmentDiv {
+  display: flex;
+}
+
+.recruitmentDiv > button {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 10px;
+  border: 0;
+  background-color: #C2A4FF;
 }
