@@ -8,6 +8,7 @@ function ProjectInformation() {
   const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
+    //하트 기능
     if (isClicked) {
       setImageSrc(heartBeforeImg);
       setIsClicked(false); //초기 상태로
