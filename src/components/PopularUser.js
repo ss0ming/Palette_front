@@ -1,8 +1,8 @@
 //eslint-disable-next-line
 import { Link, NavLink } from "react-router-dom";
-import styles from "./ProjectSummary.module.css";
+import styles from "./PopularUser.module.css";
 
-function ProjectSummary() {
+function PopularUser() {
   return (
     <section>
         <div>
@@ -11,11 +11,10 @@ function ProjectSummary() {
                 alt="img"
                 src={require(`../assets/망곰이.jpg`)}
             />
-            <h1 className={styles.mainletter}>프로젝트명</h1>
-            <h1 className={styles.subletter}>프로젝트 소개글 요약...</h1>
+            <h1 className={styles.mainletter}>사용자 이름</h1>
         </div>
     </section>
   );
 }
 
-export default ProjectSummary;
+export default PopularUser;
