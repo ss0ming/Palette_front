@@ -16,6 +16,10 @@ function Main() {
             path="/ProjectInformation"
             element={<ProjectInformationPage />}
           />
+          <Route
+            path="/ProjectInformation/:projectSlug"
+            element={<ProjectInformationPage />}
+          />
         </Routes>
       </BrowserRouter>
     </>

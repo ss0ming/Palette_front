@@ -1,9 +1,14 @@
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import styles from "./ProjectInformationPage.module.css";
 import heartBeforeImg from "../assets/heartBefore.png";
 import heartAfterImg from "../assets/heartAfter.png";
+import { getProjectBySlug, getProjects } from "../api";
 
 function ProjectInformation() {
+  const { projectSlug } = useParams();
+  const project = getProjectBySlug(projectSlug);
+
   const [imageSrc, setImageSrc] = useState(heartBeforeImg);
   const [isClicked, setIsClicked] = useState(false);
 
@@ -22,13 +27,13 @@ function ProjectInformation() {
     <>
       <div className={styles.projectInformation}>
         <div className={styles.recru}>
-          <p>모집중</p>
+          <p>{project.recruitStatus}</p>
         </div>
         <header className={styles.projectInfoHeader}>
-          <img alt="projectImg" src={require(`../assets/project_img.jpg`)} />
+          <img alt="projectImg" src={require(`../assets/${project.image}`)} />
           <div className={styles.headerInfo}>
             <div className={styles.headerInfoTitle}>
-              <h1>프로젝트명</h1>
+              <h1>{project.title}</h1>
               <img alt="heart" src={imageSrc} onClick={handleClick} />
             </div>
             <p>사용자 정보</p>
@@ -39,8 +44,8 @@ function ProjectInformation() {
             <h3 className={styles.sectionTitle}>프로젝트 소개 및 기간</h3>
             <hr />
             <div className={styles.contents}>
-              <p className={styles.period}>기간 : 2023.12 ~ 2024. 06</p>
-              <p>이 프로젝트는 ~ 어쩌구저쩌구</p>
+              <p className={styles.period}>기간 : {project.period}</p>
+              <p>{project.introduction}</p>
             </div>
           </div>
           <div className={styles.section}>
@@ -48,15 +53,7 @@ function ProjectInformation() {
             <hr />
             <div className={styles.contents}>
               <div className={styles.recruitmentDiv}>
-                <p>웹 프론트엔드 0/1</p>
-                <button>지원</button>
-              </div>
-              <div className={styles.recruitmentDiv}>
-                <p>웹 서버 0/1</p>
-                <button>지원</button>
-              </div>
-              <div className={styles.recruitmentDiv}>
-                <p>UI/UX 디자인 0/1</p>
+                <p>{project.recruitment}</p>
                 <button>지원</button>
               </div>
             </div>
@@ -71,17 +68,13 @@ function ProjectInformation() {
           <div className={styles.section}>
             <h3 className={styles.sectionTitle}>참고 링크</h3>
             <hr />
-            <div className={styles.contents}>
-              <a href="https://www.notion.so/f7147a5a76cd4c698ef6bb84c68dbcd0?v=7fbb4ce09edf489291de3fdf2b70ca24">
-                https://www.notion.so/f7147a5a76cd4c698ef6bb84c68dbcd0?v=7fbb4ce09edf489291de3fdf2b70ca24
-              </a>
-            </div>
+            <div className={styles.contents}>{project.Reference}</div>
           </div>
           <div className={styles.section}>
             <h3 className={styles.sectionTitle}>댓글</h3>
             <hr />
             <div className={styles.contents}>
-              <p>어쩌구저쩌구 댓글~</p>
+              <p>{project.comment}</p>
             </div>
           </div>
         </main>

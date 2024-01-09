@@ -1,8 +1,18 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import ProjectInformation from "./ProjectInformationPage";
+import ProjectItem from "../components/ProjectItem";
+import { getProjects } from "../api";
+
 function ProjectListPage() {
+  const projects = getProjects();
+
   return (
-    <>
-      <p>나는 프로젝트 페이지당! 우현오빠가 만들어야 할 페이지</p>
-    </>
+    <div>
+      {projects?.map((project) => (
+        <ProjectItem key={project.id} project={project} />
+      ))}
+    </div>
   );
 }
 
