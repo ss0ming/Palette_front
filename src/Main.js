@@ -3,6 +3,7 @@ import Nav from "./components/Nav";
 import HomePage from "./pages/HomePage";
 import ProjectListPage from "./pages/ProjectListPage";
 import ProjectInformationPage from "./pages/ProjectInformationPage";
+import MyPage from "./pages/MyPage";
 
 function Main() {
   return (
@@ -20,6 +21,7 @@ function Main() {
             path="/ProjectInformation/:projectSlug"
             element={<ProjectInformationPage />}
           />
+          <Route path="/MyPage" element={<MyPage />} />
         </Routes>
       </BrowserRouter>
     </>

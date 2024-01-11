@@ -1,0 +1,44 @@
+.MyPage {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 100px;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+}
+
+.profile > img {
+  width: 400px;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.profileInfo > section {
+  margin-bottom: 20px;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.section2 {
+  width: 550px;
+  height: 120px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.section2 > p {
+  margin: 10px;
+}
+
+.section3 > p {
+  margin-top: 10px;
+}

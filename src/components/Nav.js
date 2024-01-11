@@ -22,6 +22,9 @@ function Nav() {
         <li>
           <Link to="/ProjectInformation">내가 만들어야 하는 페이지</Link>
         </li>
+        <li>
+          <Link to="/MyPage">내 정보</Link>
+        </li>
       </ul>
     </div>
   );
