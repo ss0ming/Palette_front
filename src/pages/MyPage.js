@@ -1,6 +1,22 @@
+import { useState } from "react";
 import styles from "./MyPage.module.css";
+import heartBeforeImg from "../assets/heartBefore.png";
+import heartAfterImg from "../assets/heartAfter.png";
 
 function MyPage() {
+  const [imageSrc, setImageSrc] = useState(heartBeforeImg);
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    //하트 기능
+    if (isClicked) {
+      setImageSrc(heartBeforeImg);
+      setIsClicked(false); //초기 상태로
+    } else {
+      setImageSrc(heartAfterImg);
+      setIsClicked(true);
+    }
+  };
   return (
     <>
       <div className={styles.MyPage}>
@@ -9,10 +25,14 @@ function MyPage() {
           <div className={styles.profileInfo}>
             <section className={styles.section1}>
               <h2>닉네임</h2>
-              <p className={styles.major}>전공자</p>
+              <p className={styles.major}>(전공자)</p>
+              <img alt="heart" src={imageSrc} onClick={handleClick} />
             </section>
             <section className={styles.section2}>
-              <p className={styles.info}>안녕하세요 저는~</p>
+              <p className={styles.info}>
+                안녕하세요 저는~어쩌구저쩌구 저는서린이구요 좀이따밥먹을것입니다
+                제대로나오는지확인중
+              </p>
             </section>
             <section className={styles.section3}>
               <h2>내 직무</h2>
@@ -20,7 +40,26 @@ function MyPage() {
             </section>
             <section className={styles.section4}>
               <h2>내 기술스택</h2>
+              <img alt="reactImg" src={require(`../assets/react.png`)} />
             </section>
+          </div>
+        </div>
+        <div className={styles.userProject}>
+          <div className={styles.presentProject}>
+            <h3>구인중인 프로젝트</h3>
+            <img
+              alt="projectImg"
+              src={require(`../assets/projectImg_couple.avif`)}
+            ></img>
+            <p>커플 앱 프로젝트</p>
+          </div>
+          <div className={styles.pastProject}>
+            <h3>구인했던 프로젝트</h3>
+            <img
+              alt="projectImg"
+              src={require(`../assets/projectImg_exercise.png`)}
+            ></img>
+            <p>운동 웹사이트 프로젝트</p>
           </div>
         </div>
       </div>
