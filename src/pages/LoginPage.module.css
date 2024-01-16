@@ -1,0 +1,35 @@
+.header {
+  margin: 30px;
+}
+
+.loginPage {
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLogin > button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.simpleLogin {
+  margin-top: 50px;
+}
+
+.simpleLogin > p {
+  margin-bottom: 10px;
+}
+
+.simpleLogin > img {
+  width: 40px;
+  height: 40px;
+}

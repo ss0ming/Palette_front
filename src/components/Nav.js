@@ -26,7 +26,7 @@ function Nav() {
           <Link to="/MyPage">내 정보</Link>
         </li>
         <li>
-          <Link to="/Login">로그인</Link>
+          <Link to="/LoginPage">로그인</Link>
         </li>
       </ul>
     </div>

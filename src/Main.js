@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import ProjectListPage from "./pages/ProjectListPage";
 import ProjectInformationPage from "./pages/ProjectInformationPage";
 import MyPage from "./pages/MyPage";
+import LoginPage from "./pages/LoginPage";
 
 function Main() {
   return (
@@ -22,6 +23,7 @@ function Main() {
             element={<ProjectInformationPage />}
           />
           <Route path="/MyPage" element={<MyPage />} />
+          <Route path="/LoginPage" element={<LoginPage />} />
         </Routes>
       </BrowserRouter>
     </>
