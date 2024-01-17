@@ -28,6 +28,9 @@ function Nav() {
         <li>
           <Link to="/LoginPage">로그인</Link>
         </li>
+        <li>
+          <Link to="/RegisterPage">회원가입</Link>
+        </li>
       </ul>
     </div>
   );

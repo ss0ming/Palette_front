@@ -5,6 +5,7 @@ import ProjectListPage from "./pages/ProjectListPage";
 import ProjectInformationPage from "./pages/ProjectInformationPage";
 import MyPage from "./pages/MyPage";
 import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 function Main() {
   return (
@@ -24,6 +25,7 @@ function Main() {
           />
           <Route path="/MyPage" element={<MyPage />} />
           <Route path="/LoginPage" element={<LoginPage />} />
+          <Route path="/RegisterPage" element={<RegisterPage />} />
         </Routes>
       </BrowserRouter>
     </>
