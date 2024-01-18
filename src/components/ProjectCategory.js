@@ -5,15 +5,9 @@ import ProjectSummary from "./ProjectSummary.js";
 
 function ProjectCategory() {
   return (
-    <section>
-        <div className = {styles.ProjectCategory}>
-          <ProjectSummary/>
-          <ProjectSummary/>
-          <ProjectSummary/>
-          <ProjectSummary/>
+        <div style={{ display: 'flex', flex: '1', flexDirection: 'row', paddingLeft: '30px'}}>
           <ProjectSummary/>
         </div>
-    </section>
   );
 }
 

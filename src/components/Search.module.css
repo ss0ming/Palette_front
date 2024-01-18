@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+.std{
+    width: 600px;
+}
+
+.button{
+    width: 100px;
+}
+
+.button2{
+    width: 200px;
+}

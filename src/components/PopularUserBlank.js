@@ -5,15 +5,9 @@ import PopularUser from "./PopularUser.js";
 
 function PopularUserBlank() {
   return (
-    <section>
-        <div className = {styles.PopularUserBlank}>
-          <PopularUser/>
-          <PopularUser/>
-          <PopularUser/>
-          <PopularUser/>
-          <PopularUser/>
-        </div>
-    </section>
+    <div className={styles.PopularUserBlank}>
+      <PopularUser />
+    </div>
   );
 }
 
