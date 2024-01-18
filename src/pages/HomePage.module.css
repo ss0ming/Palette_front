@@ -1,0 +1,19 @@
+.home {
+    margin-top: 100px;
+  }
+  
+  .homeHeader {
+    display: flex;
+    justify-content: center;
+    background-color: #C2A4FF;
+    margin: 30px;
+    padding: 20px;
+  }
+  
+  .homeHeader > img {
+    width: 1200px;
+  }
+  
+  .main > h3 {
+    margin: 40px;
+  }

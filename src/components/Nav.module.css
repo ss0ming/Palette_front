@@ -4,11 +4,16 @@
 }
 
 .navbar {
+  width: 100vw;
+  height: 40px;
+  position: fixed;
   display: flex;
   text-align: right;
   background-color: #f0efef;
   flex-direction: row;
   padding: 20px;
+  top: 0;
+  left: 0;
 }
 
 .Logo {
@@ -16,7 +21,7 @@
 }
 
 .navProject {
-  margin-left: 850px;
+  margin-left: 600px;
   font-size: 18px;
   font-weight: 800;
 }
@@ -29,6 +34,7 @@ ul {
 
 li {
   float: left;
+  white-space: nowrap;
   margin-left: 10px;
 }
 
