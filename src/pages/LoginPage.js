@@ -32,7 +32,7 @@ function LoginPage() {
         <h1 className={styles.header}>로그인</h1>
         <section className={styles.formLogin}>
           <form onSubmit={handleSubmit}>
-            <label>ID</label>
+            <label htmlFor="email">ID</label>
             <input
               id="email"
               name="email"
@@ -40,7 +40,7 @@ function LoginPage() {
               value={values.email}
               onChange={handleChange}
             />
-            <label>PASSWORD</label>
+            <label htmlFor="password">PASSWORD</label>
             <input
               id="password"
               name="password"
@@ -48,7 +48,7 @@ function LoginPage() {
               value={values.password}
               onChange={handleChange}
             />
-            <button>로그인</button>
+            <button type="submit">로그인</button>
           </form>
         </section>
         <section className={styles.simpleLogin}>

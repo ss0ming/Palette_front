@@ -13,12 +13,37 @@
 .formLogin > form {
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
+  width: 400px;
+}
+
+.formLogin label {
+  font-weight: 800;
+}
+
+.formLogin input {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  height: 25px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.formLogin input:focus {
+  border-color: #C2A4FF;
+  outline: none;
 }
 
 .formLogin  button {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  align-items: center;
+  background-color: #C2A4FF;
+  height: 40px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
 }
 
 .simpleLogin {

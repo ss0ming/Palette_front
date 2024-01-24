@@ -25,14 +25,28 @@ function RegisterPage() {
   }
 
   async function handleSubmit(e) {
-    e.preventDefalut();
+    e.preventDefault();
 
-    if (values.password !== values.passwordRepeat) {
-      console.log("비밀번호가 일치하지 않습니다");
-      return;
-    }
+    // if (values.password !== values.passwordRepeat) {
+    //   console.log("비밀번호가 일치하지 않습니다");
+    //   return;
+    // }
     const { name, email, password } = values;
-    await axios.post("/users", { name, email, password });
+    try {
+      const response = await axios.post(
+        "/users",
+        { name, email, password },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log(response.data); // 성공했을 경우 응답 데이터
+    } catch (error) {
+      console.error("Error during request:", error);
+    }
+
     //await axios.post("/auth/login", { email, password });
   }
 
@@ -78,7 +92,7 @@ function RegisterPage() {
               value={values.passwordRepeat}
               onChange={handleChange}
             />
-            <button>회원가입</button>
+            <button type="submit">회원가입</button>
           </form>
         </section>
       </div>
