@@ -1,15 +1,19 @@
 import styles from "./HomePage.module.css";
+import ProjectSummary from "../components/ProjectSummary.js";
 
 function HomePage() {
   return (
     <>
       <div className={styles.home}>
         <header className={styles.homeHeader}>
+          <button>왼쪽 버튼</button>
           <img alt="homeImg" src={require(`../assets/paletteLogo.png`)}></img>
+          <button>오른쪽 버튼</button>
         </header>
         <main className={styles.main}>
           <h3>현재 구인중인 프로젝트들</h3>
-          <button>왼쪽 버튼</button>
+          <div style={{ display: "flex" }}><ProjectSummary /></div>
+
         </main>
       </div>
     </>

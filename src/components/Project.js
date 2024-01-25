@@ -16,7 +16,7 @@ function Project() {
             <img
               className={styles.photo}
               alt="img"
-              src={require(`../assets/망곰이.jpg`)}
+              src={require(`../assets/${project.image}`)}
             />
           </div>
           <div style={{ width: 470, height: 25, left: 150, top: 11, position: 'absolute', color: 'black', fontSize: 20, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word' }}>{project.title}</div>

@@ -14,7 +14,7 @@ function ProjectSummary() {
           <img
             className={styles.photo}
             alt="img"
-            src={require(`../assets/망곰이.jpg`)}
+            src={require(`../assets/${project.image}`)}
           />
           <h1 className={styles.mainletter}>{project.title}</h1>
           <h1 className={styles.subletter}>{project.introduction}</h1>
