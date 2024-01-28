@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "../lib/axios";
 import styles from "./LoginPage.module.css";
 import { useNavigate } from "react-router-dom";
+import HorizonLine from "../components/HorizontalLine";
 
 function LoginPage() {
   const [values, setValues] = useState({
@@ -25,6 +26,10 @@ function LoginPage() {
     await axios.post("/auth/login", { email, password });
     navigate("/MyPage");
   }
+
+  const handleKakaoLoginClick = () => {
+    window.location.href = "http://localhost:8080/oauth/kakao"; //페이지 리다이렉트
+  };
 
   return (
     <>
@@ -52,9 +57,13 @@ function LoginPage() {
           </form>
         </section>
         <section className={styles.simpleLogin}>
-          <p>간편 로그인</p>
-          <img alt="loginImg" src={require(`../assets/loginImg_kakao.png`)} />
-          <img alt="loginImg" src={require(`../assets/loginImg_naver.png`)} />
+          <HorizonLine text="간편 로그인" />
+          <img
+            alt="loginImg"
+            src={require(`../assets/kakaoLoginButton.png`)}
+            onClick={handleKakaoLoginClick}
+          />
+          <img alt="loginImg" src={require(`../assets/naverLoginButton.png`)} />
         </section>
       </div>
     </>

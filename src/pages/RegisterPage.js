@@ -50,6 +50,10 @@ function RegisterPage() {
     //await axios.post("/auth/login", { email, password });
   }
 
+  const handleKakaoLoginClick = () => {
+    window.location.href = "http://localhost:8080/oauth/kakao"; //페이지 리다이렉트
+  };
+
   return (
     <>
       <div className={styles.loginPage}>
@@ -94,6 +98,14 @@ function RegisterPage() {
             />
             <button type="submit">회원가입</button>
           </form>
+        </section>
+        <section className={styles.simpleLogin}>
+          <img
+            alt="loginImg"
+            src={require(`../assets/kakaoLoginButton.png`)}
+            onClick={handleKakaoLoginClick}
+          />
+          <img alt="loginImg" src={require(`../assets/naverLoginButton.png`)} />
         </section>
       </div>
     </>

@@ -13,7 +13,7 @@
 .formLogin > form {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 25px;
   width: 400px;
 }
 
@@ -47,14 +47,16 @@
 }
 
 .simpleLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
   margin-top: 50px;
 }
 
-.simpleLogin > p {
-  margin-bottom: 10px;
-}
-
 .simpleLogin > img {
-  width: 40px;
-  height: 40px;
+  width: 250px;
+  height: 60px;
+  margin-bottom: 10px;
 }
