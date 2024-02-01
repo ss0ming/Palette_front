@@ -12,7 +12,6 @@ function RegisterPage() {
     passwordRepeat: "",
   });
 
-  //const toast= useToaster();
   //const navigate = useNavigate();
 
   function handleChange(e) {
@@ -27,15 +26,16 @@ function RegisterPage() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    // if (values.password !== values.passwordRepeat) {
-    //   console.log("비밀번호가 일치하지 않습니다");
-    //   return;
-    // }
-    const { name, email, password } = values;
+    //비밀번호와 비밀번호확인값이 같은지 확인
+    if (values.password !== values.passwordRepeat) {
+      alert("비밀번호가 일치하지 않습니다");
+      return;
+    }
+    const { name, email, password, passwordRepeat } = values;
     try {
       const response = await axios.post(
         "/users",
-        { name, email, password },
+        { name, email, password, passwordRepeat },
         {
           headers: {
             "Content-Type": "application/json",
@@ -47,7 +47,7 @@ function RegisterPage() {
       console.error("Error during request:", error);
     }
 
-    //await axios.post("/auth/login", { email, password });
+    //await axios.post("/auth/login", { email, password }); //회원가입 후 로그인 하기
   }
 
   const handleKakaoLoginClick = () => {
