@@ -1,35 +1,41 @@
 //eslint-disable-next-line
 import * as React from 'react';
+import { useState } from "react";
 import { Button, InputLabel, MenuItem, FormControl, Select } from "@mui/material";
 import styles from "./Search.module.css";
 import { Link } from "react-router-dom";
 import jsondata from "../api/mock.json";
+import Paper from '@mui/material/Paper';
+import InputBase from '@mui/material/InputBase';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import SearchIcon from '@mui/icons-material/Search';
 
 function Search() {
 
     const data = jsondata;
     const s = data.projects;
-    const [region, setRegion] = React.useState('');
-    const [job, setJob] = React.useState('');
-    const [detail, setDetail] = React.useState('');
-    const [views, setViews] = React.useState('');
-    const [search, setSearch] = React.useState('');
-    const searching = (e) => {
-        setSearch(e.target.value);
-    };
+    let [region, setRegion] = useState('');
+    let [job, setJob] = useState('');
+    let [detail, setDetail] = useState('');
+    let [views, setViews] = useState('');
+    let [search, setSearch] = useState('');
+    function onSearchHandler(event) {
+        setSearch(event.target.value);
+    }
 
-    const handleChange1 = (event) => {
+    function handleChange1(event) {
         setRegion(event.target.value);
-    };
-    const handleChange2 = (event) => {
+    }
+    function handleChange2(event) {
         setJob(event.target.value);
-    };
-    const handleChange3 = (event) => {
+    }
+    function handleChange3(event) {
         setDetail(event.target.value);
-    };
-    const handleChange4 = (event) => {
+    }
+    function handleChange4(event) {
         setViews(event.target.value);
-    };
+    }
 
     const result =
         s.filter((project) => {
@@ -39,6 +45,8 @@ function Search() {
             else if (project.title.toLowerCase().includes(search.toLowerCase())) {
                 return project;
             }
+            else
+                return 0;
         })
             .map(project => (
                 <Link to="/ProjectInformation">
@@ -64,14 +72,29 @@ function Search() {
                         <div style={{ width: 250, height: 20, left: 430, top: 123, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word' }}>최근 업데이트 날짜 : {project.date}</div>
                     </div>
                 </Link >
-            ));
+            ))
 
     return (
         <>
             <div>
-                <input type='text' onChange={searching} />
-                <Button className={styles.button} label="Searchbtn" variant="contained">검색</Button>
-                <Button className={styles.button2} label="프로젝트 등록하기" variant="contained">프로젝트 등록하기</Button>
+                <Paper
+                    component="form"
+                    sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '1000px' }}
+                >
+                    <InputBase
+                        sx={{ ml: 1, flex: 1 }}
+                        placeholder="검색"
+                        value={search}
+                        onChange={onSearchHandler}
+                    />
+                    <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
+                        <SearchIcon />
+                    </IconButton>
+                    <Divider sx={{ height: 28, m: 1 }} orientation="vertical" />
+                    <Button className={styles.button} label="Searchbtn" variant="contained">검색</Button>
+                    <Divider sx={{ height: 28, m: 1 }} orientation="vertical" />
+                    <Button className={styles.button2} label="프로젝트 등록하기" variant="contained">프로젝트 등록하기</Button>
+                </Paper>
             </div>
             <div>
                 <FormControl sx={{ m: 1, minWidth: 120 }}>
@@ -131,8 +154,8 @@ function Search() {
                     </Select>
                 </FormControl>
             </div>
-            <div style={{display: `flex` }}>{result}</div>
-           
+            <div style={{ display: `flex`, width: '100%' }}>{result}</div>
+
         </>
     );
 }
