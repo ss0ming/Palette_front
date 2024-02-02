@@ -6,7 +6,7 @@ import ProjectSummary from "../components/ProjectSummary.js";
 function ProjectListPage() {
   return (
     <body>
-      <div style={{ display: 'flex' }}>
+      <div style={{ display: "flex" }}>
         <div>
           <h1 className={styles.mainletter}>신규 프로젝트</h1>
           <div style={{ width: 650, display: `flex` }}>
@@ -23,7 +23,7 @@ function ProjectListPage() {
 
       <div>
         <h1 className={styles.mainletter}>인기있는 사용자</h1>
-        <div style={{ display: 'flex' }}>
+        <div style={{ display: "flex" }}>
           <PopularUser />
         </div>
       </div>

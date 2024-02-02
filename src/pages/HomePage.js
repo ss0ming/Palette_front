@@ -1,6 +1,6 @@
 import styles from "./HomePage.module.css";
 import ProjectSummary from "../components/ProjectSummary.js";
-import jsondata from "../api/mock.json"
+import jsondata from "../api/mock.json";
 import { useState } from "react";
 
 function HomePage() {
@@ -16,8 +16,9 @@ function HomePage() {
         </header>
         <main className={styles.main}>
           <h3>현재 구인중인 프로젝트들</h3>
-          <div style={{ display: "flex" }}><ProjectSummary /></div>
-
+          <div style={{ display: "flex" }}>
+            <ProjectSummary />
+          </div>
         </main>
       </div>
     </>
