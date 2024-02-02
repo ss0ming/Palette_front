@@ -1,22 +1,38 @@
 import styles from "./ProjectListPage.module.css";
-import ProjectCategory from "../components/ProjectCategory.js";
-import PopularUserBlank from "../components/PopularUserBlank.js";
+import PopularUser from "../components/PopularUser.js";
+import Search from "../components/Search.js";
+import ProjectSummary from "../components/ProjectSummary.js";
 
 function ProjectListPage() {
   return (
-    <section>
-      <div style={{ display: 'flex', flex: '1', flexDirection: 'row', justifyContent: 'space-evenly' }}>
-        <div><h1 className={styles.mainletter}>신규 프로젝트</h1>
-          <ProjectCategory />
+    <body>
+      <div style={{ display: 'flex' }}>
+        <div>
+          <h1 className={styles.mainletter}>신규 프로젝트</h1>
+          <div style={{ width: 650, display: `flex` }}>
+            <ProjectSummary />
+          </div>
         </div>
-        <div><h1 className={styles.mainletter}>관심 많은 프로젝트</h1>
-          <ProjectCategory />
+        <div>
+          <h1 className={styles.mainletter}>관심 많은 프로젝트</h1>
+          <div style={{ width: 650, display: `flex` }}>
+            <ProjectSummary />
+          </div>
         </div>
       </div>
-      <div><h1 className={styles.mainletter}>인기있는 사용자</h1>
-        <PopularUserBlank />
+
+      <div>
+        <h1 className={styles.mainletter}>인기있는 사용자</h1>
+        <div style={{ display: 'flex' }}>
+          <PopularUser />
+        </div>
       </div>
-    </section>
+
+      <div>
+        <h1 className={styles.mainletter}>검색</h1>
+        <Search />
+      </div>
+    </body>
   );
 }
 
