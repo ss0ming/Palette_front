@@ -20,9 +20,6 @@ function Nav() {
           <Link to="/ProjectList">프로젝트</Link>
         </li>
         <li>
-          <Link to="/ProjectInformation">내가 만들어야 하는 페이지</Link>
-        </li>
-        <li>
           <Link to="/MyPage">내 정보</Link>
         </li>
         <li>

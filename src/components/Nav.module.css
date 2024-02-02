@@ -8,6 +8,8 @@
   height: 40px;
   position: fixed;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-align: right;
   background-color: #f0efef;
   flex-direction: row;
@@ -21,7 +23,7 @@
 }
 
 .navProject {
-  margin-left: 600px;
+  margin-left: 300px;
   font-size: 18px;
   font-weight: 800;
 }
