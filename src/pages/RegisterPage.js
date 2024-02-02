@@ -50,6 +50,7 @@ function RegisterPage() {
     //await axios.post("/auth/login", { email, password }); //회원가입 후 로그인 하기
   }
 
+  //카카오로그인
   const handleKakaoLoginClick = () => {
     window.location.href = "http://localhost:8080/oauth/kakao"; //페이지 리다이렉트
   };
