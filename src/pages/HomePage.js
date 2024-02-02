@@ -4,6 +4,8 @@ import jsondata from "../api/mock.json";
 import { useState } from "react";
 
 function HomePage() {
+
+  
   return (
     <>
       <div className={styles.home}>
