@@ -8,8 +8,8 @@ function ProjectSummary() {
   const p = data.projects;
 
   return p.map((project) => (
-    <Link to={`/projectInformation/${project.slug}`}>
-      <div key={project.projectId}>
+    <Link to={`/ProjectInformation/${project.slug}`} key={project.projectId}>
+      <div>
         <img
           className={styles.photo}
           alt="img"

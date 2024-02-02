@@ -8,7 +8,7 @@ function PopularUser() {
   const p = data.projects;
 
   return p.map((project) => (
-    <Link to={`/projectInformation/${project.slug}`}>
+    <Link to={`/ProjectInformation/${project.slug}`}>
       <div key={project.projectId}>
         <img
           className={styles.photo}
