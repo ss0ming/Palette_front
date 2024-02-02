@@ -17,10 +17,6 @@ function Main() {
           <Route path="/" element={<HomePage />} />
           <Route path="/ProjectList" element={<ProjectListPage />} />
           <Route
-            path="/ProjectInformation"
-            element={<ProjectInformationPage />}
-          />
-          <Route
             path="/ProjectInformation/:projectSlug"
             element={<ProjectInformationPage />}
           />

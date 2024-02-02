@@ -1,7 +1,7 @@
 //eslint-disable-next-line
 import { Link, NavLink } from "react-router-dom";
 import styles from "./PopularUser.module.css";
-import jsondata from "../api/mock.json"
+import jsondata from "../api/mock.json";
 
 function PopularUser() {
   const data = jsondata;
@@ -9,7 +9,7 @@ function PopularUser() {
   
   return (
     p.map(project => (
-      <Link to="/ProjectInformation">
+      <Link to={`/ProjectInformation/${project.slug}`}>
         <div key={project.projectId}>
           <img
             className={styles.photo}

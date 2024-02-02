@@ -1,16 +1,16 @@
 //eslint-disable-next-line
 import { Link, NavLink } from "react-router-dom";
 import styles from "./ProjectSummary.module.css";
-import jsondata from "../api/mock.json"
+import jsondata from "../api/mock.json";
 
 function ProjectSummary() {
   const data = jsondata;
   const p = data.projects;
-
+  
   return (
     p.map(project => (
-      <Link to="/ProjectInformation">
-        <div key={project.projectId}>
+     <Link to={`/ProjectInformation/${project.slug}`} key={project.projectId}>
+        <div>
           <img
             className={styles.photo}
             alt="img"
