@@ -1,26 +1,33 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./ProjectInformationPage.module.css";
-import heartBeforeImg from "../assets/heartBefore.png";
-import heartAfterImg from "../assets/heartAfter.png";
-import { getProjectBySlug, getProjects } from "../api";
+import { getProjectBySlug } from "../api";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 function ProjectInformation() {
   const { projectSlug } = useParams();
   const project = getProjectBySlug(projectSlug);
 
-  const [imageSrc, setImageSrc] = useState(heartBeforeImg);
+  //하트 이미지 관련 useState
+  const InitialIcon = <FavoriteBorderIcon />;
+  const [icon, setIcon] = useState(InitialIcon);
   const [isClicked, setIsClicked] = useState(false);
 
+  //하트 이미지 클릭 함수
   const handleClick = () => {
-    //하트 기능
     if (isClicked) {
-      setImageSrc(heartBeforeImg);
+      setIcon(<FavoriteBorderIcon />);
       setIsClicked(false); //초기 상태로
     } else {
-      setImageSrc(heartAfterImg);
+      setIcon(<FavoriteIcon />);
       setIsClicked(true);
     }
+  };
+
+  const iconStyle = {
+    color: isClicked ? "red" : "black", // 예시로 클릭 시 빨간색으로 변경
+    cursor: "pointer", // 마우스 커서를 포인터로 변경
   };
 
   return (
@@ -34,7 +41,15 @@ function ProjectInformation() {
           <div className={styles.headerInfo}>
             <div className={styles.headerInfoTitle}>
               <h1>{project.title}</h1>
-              <img alt="heart" src={imageSrc} onClick={handleClick} />
+              <div>
+                <span
+                  className={styles.heartIcon}
+                  onClick={handleClick}
+                  style={iconStyle}
+                >
+                  {icon}
+                </span>
+              </div>
             </div>
             <p>사용자 정보</p>
           </div>
