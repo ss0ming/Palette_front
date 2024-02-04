@@ -80,5 +80,19 @@
           "comment": "운동 같이 할 사람",
           "date" : "2024-01-26"
       }
+  ],
+  "homeImages": [
+    {
+        "imageId": 1,
+        "image": "homeEx1.PNG"
+    },
+    {
+        "imageId": 2,
+        "image": "homeEx2.PNG"
+    },
+    {
+        "imageId": 3,
+        "image": "homeEx3.PNG"
+    }
   ]
 }
