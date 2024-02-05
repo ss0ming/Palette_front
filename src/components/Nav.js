@@ -13,21 +13,23 @@ function Nav() {
             src={require(`../assets/paletteLogo.png`)}
           />
         </li>
-        <li>
+        <li className={styles.homeLogo}>
           <Link to="/">Palette</Link>
         </li>
         <li className={styles.navProject}>
           <Link to="/ProjectList">프로젝트</Link>
         </li>
-        <li>
+        <li className={styles.myPage}>
           <Link to="/MyPage">내 정보</Link>
         </li>
-        <li>
-          <Link to="/LoginPage">로그인</Link>
-        </li>
-        <li>
-          <Link to="/RegisterPage">회원가입</Link>
-        </li>
+        <div className={styles.userList}>
+          <li className={styles.login}>
+            <Link to="/LoginPage">로그인</Link>
+          </li>
+          <li className={styles.register}>
+            <Link to="/RegisterPage">회원가입</Link>
+          </li>
+        </div>
       </ul>
     </div>
   );
