@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
 .header {
   margin: 30px;
   white-space: nowrap;
@@ -14,7 +16,7 @@
 .formLogin > form {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 25px;
   width: 400px;
 }
 
@@ -25,10 +27,17 @@
 .formLogin input {
   margin-top: 5px;
   margin-bottom: 10px;
-  height: 25px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  padding-left: 30px;
+  width: 360px;
+  height: 65px;
+  border: 1px solid #bdbdbd;
+  border-radius: 7px;
+  font-size: 17px;
+}
+
+.formLogin input::placeholder {
+  font-size: 17px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 .formLogin input:focus {
@@ -40,11 +49,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
   background-color: #C2A4FF;
-  height: 40px;
+  width: 390px;
+  height: 65px;
   margin-top: 20px;
   border: none;
   border-radius: 8px;
+  font-size: 19px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
 }
 .simpleLogin {
   display: flex;
