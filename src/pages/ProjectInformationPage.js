@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import styles from "./ProjectInformationPage.module.css";
 import heartBeforeImg from "../assets/heartBefore.png";
 import heartAfterImg from "../assets/heartAfter.png";
-import { getProjectBySlug, getProjects } from "../api";
+import { getProjectBySlug } from "../api";
 
 function ProjectInformation() {
   const { projectSlug } = useParams();
