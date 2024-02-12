@@ -1,14 +1,21 @@
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import styles from "./MyPage.module.css";
 import heartBeforeImg from "../assets/heartBefore.png";
 import heartAfterImg from "../assets/heartAfter.png";
 
 function MyPage() {
+  const [user, setUser] = useState(null);
+  //useParams 사용해 현재 라우트에서 동적으로 받은 값을 userId에
+  const params = useParams();
+  const userId = params.userId;
+
+  //하트 이미지
   const [imageSrc, setImageSrc] = useState(heartBeforeImg);
   const [isClicked, setIsClicked] = useState(false);
 
+  //하트 click 함수
   const handleClick = () => {
-    //하트 기능
     if (isClicked) {
       setImageSrc(heartBeforeImg);
       setIsClicked(false); //초기 상태로

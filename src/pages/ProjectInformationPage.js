@@ -6,6 +6,15 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 function ProjectInformation() {
+  /*현재 URL에서 추출한 동적으로 설정된 파라미터 값
+  ex) URL이 "/ProjectInformation/couple-app" 인 경우
+  projectSlug에는 couple-app이 들어감 */
+
+  /*<Route
+      path="/ProjectInformation/:projectSlug"
+      element={<ProjectInformationPage />}
+    />
+    Main.js에서 내가 동적 매개변수의 값을 :projectSlug로 지정했기 때문*/
   const { projectSlug } = useParams();
   const project = getProjectBySlug(projectSlug);
 
