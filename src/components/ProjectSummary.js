@@ -9,7 +9,7 @@ function ProjectSummary() {
 
   return p.map((project) => (
     <Link to={`/ProjectInformation/${project.slug}`} key={project.projectId}>
-      <div>
+      <div className={styles.projectDiv}>
         <img
           className={styles.photo}
           alt="img"
