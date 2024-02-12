@@ -14,7 +14,9 @@
           "Reference": "https://www.notion.so/f7147a5a76cd4c698ef6bb84c68dbcd0?v=7fbb4ce09edf489291de3fdf2b70ca24",
           "commenter": "",
           "comment": "커플들만 이용할 수 있나요?",
-          "date" : "2024-01-17"
+          "date" : "2024-01-17",
+          "region" : "서울",
+          "views" : 100
       },
       {
           "projectId": 2,
@@ -30,7 +32,9 @@
           "Reference": "https://www.notion.so/f7147a5a76cd4c698ef6bb84c68dbcd0?v=7fbb4ce09edf489291de3fdf2b70ca24",
           "commenter": "",
           "comment": "운동 같이 할 사람",
-          "date" : "2024-01-18"
+          "date" : "2024-01-18",
+          "region" : "춘천",
+          "views" : 200
       },
       {
           "projectId": 3,
@@ -46,7 +50,9 @@
           "Reference": "https://www.notion.so/f7147a5a76cd4c698ef6bb84c68dbcd0?v=7fbb4ce09edf489291de3fdf2b70ca24",
           "commenter": "",
           "comment": "",
-          "date" : "2024-01-25"
+          "date" : "2024-01-25",
+          "region" : "강릉",
+          "views" : 300
       },
       {
           "projectId": 4,
@@ -62,7 +68,9 @@
           "Reference": "https://www.notion.so/f7147a5a76cd4c698ef6bb84c68dbcd0?v=7fbb4ce09edf489291de3fdf2b70ca24",
           "commenter": "",
           "comment": "",
-          "date" : "2024-01-25"
+          "date" : "2024-01-25",
+          "region" : "서울",
+          "views" : 400
       },
       {
           "projectId": 5,
@@ -78,7 +86,9 @@
           "Reference": "https://www.notion.so/f7147a5a76cd4c698ef6bb84c68dbcd0?v=7fbb4ce09edf489291de3fdf2b70ca24",
           "commenter": "",
           "comment": "운동 같이 할 사람",
-          "date" : "2024-01-26"
+          "date" : "2024-01-26",
+          "region" : "춘천",
+          "views" : 500
       }
   ],
   "homeImages": [

@@ -1,9 +1,13 @@
 import styles from "./HomePage.module.css";
+<<<<<<< HEAD
 import ProjectSummary from "../components/ProjectSummary.js";
 import jsondata from "../api/mock.json";
 import { useState } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+=======
+import ProjectSummaryHome from "../components/ProjectSummaryHome.js";
+>>>>>>> 99f20ef4ba5b2816791ca9353831aa2271d49d7a
 
 function HomePage() {
   const [currentHomeImageId, setCurrentHomeImageId] = useState(1);
@@ -55,8 +59,8 @@ function HomePage() {
 
         <main className={styles.main}>
           <h3>현재 구인중인 프로젝트들</h3>
-          <div className={styles.ProjectSummary}>
-            <ProjectSummary />
+          <div style={{ display: "flex" }}>
+            <ProjectSummaryHome />
           </div>
         </main>
       </div>

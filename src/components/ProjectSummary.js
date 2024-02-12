@@ -7,19 +7,25 @@ function ProjectSummary() {
   const data = jsondata;
   const p = data.projects;
 
-  return p.map((project) => (
-    <Link to={`/ProjectInformation/${project.slug}`} key={project.projectId}>
-      <div className={styles.projectDiv}>
-        <img
-          className={styles.photo}
-          alt="img"
-          src={require(`../assets/${project.image}`)}
-        />
-        <h1 className={styles.mainletter}>{project.title}</h1>
-        <h1 className={styles.subletter}>{project.introduction}</h1>
-      </div>
-    </Link>
-  ));
+  return p
+    .filter((project) => {
+      if (project.projectId <= 4) {
+        return project;
+      } else return 0;
+    })
+    .map((project) => (
+      <Link to={`/ProjectInformation/${project.slug}`} key={project.projectId}>
+        <div>
+          <img
+            className={styles.photo}
+            alt="img"
+            src={require(`../assets/${project.image}`)}
+          />
+          <h1 className={styles.mainletter}>{project.title}</h1>
+          <h1 className={styles.subletter}>{project.introduction}</h1>
+        </div>
+      </Link>
+    ));
 }
 
 export default ProjectSummary;
