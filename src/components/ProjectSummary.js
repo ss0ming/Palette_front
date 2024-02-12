@@ -6,10 +6,15 @@ import jsondata from "../api/mock.json";
 function ProjectSummary() {
   const data = jsondata;
   const p = data.projects;
-  
-  return (
-    p.map(project => (
-     <Link to={`/ProjectInformation/${project.slug}`} key={project.projectId}>
+
+  return p
+    .filter((project) => {
+      if (project.projectId <= 4) {
+        return project;
+      } else return 0;
+    })
+    .map((project) => (
+      <Link to={`/ProjectInformation/${project.slug}`} key={project.projectId}>
         <div>
           <img
             className={styles.photo}
@@ -20,8 +25,7 @@ function ProjectSummary() {
           <h1 className={styles.subletter}>{project.introduction}</h1>
         </div>
       </Link>
-    ))
-  );
+    ));
 }
 
 export default ProjectSummary;
