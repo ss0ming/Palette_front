@@ -90,5 +90,19 @@
           "region" : "춘천",
           "views" : 500
       }
+  ],
+  "homeImages": [
+    {
+        "imageId": 1,
+        "image": "homeEx1.PNG"
+    },
+    {
+        "imageId": 2,
+        "image": "homeEx2.PNG"
+    },
+    {
+        "imageId": 3,
+        "image": "homeEx3.PNG"
+    }
   ]
 }

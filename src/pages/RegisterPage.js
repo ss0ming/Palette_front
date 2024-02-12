@@ -61,25 +61,22 @@ function RegisterPage() {
         <h1 className={styles.header}>회원가입</h1>
         <section className={styles.formLogin}>
           <form onSubmit={handleSubmit}>
-            <label htmlFor="name">이름</label>
             <input
               id="name"
               name="name"
               type="text"
-              placeholder="홍길동"
+              placeholder="이름"
               value={values.name}
               onChange={handleChange}
             />
-            <label htmlFor="email">email</label>
             <input
               id="email"
               name="email"
               type="email"
-              placeholder="example@email.com"
+              placeholder="이메일"
               value={values.email}
               onChange={handleChange}
             />
-            <label htmlFor="password">PASSWORD</label>
             <input
               id="password"
               name="password"
@@ -88,7 +85,6 @@ function RegisterPage() {
               value={values.password}
               onChange={handleChange}
             />
-            <label htmlFor="passwordRepeat">PASSWORD check</label>
             <input
               id="passwordRepeat"
               name="passwordRepeat"

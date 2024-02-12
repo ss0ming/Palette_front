@@ -19,12 +19,10 @@
   display: flex;
 }
 
-
-.headerInfoTitle > img {
-  width: 25px;
-  height: 25px;
-  margin-top: 5px;
+/*이상한 곳에 적용됨..*/
+.heartIcon {
   margin-left: 10px;
+  font-size: 30px;
 }
 
 .recru {

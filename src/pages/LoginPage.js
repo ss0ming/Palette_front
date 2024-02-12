@@ -37,19 +37,20 @@ function LoginPage() {
         <h1 className={styles.header}>로그인</h1>
         <section className={styles.formLogin}>
           <form onSubmit={handleSubmit}>
-            <label htmlFor="email">ID</label>
             <input
               id="email"
               name="email"
               type="email"
+              placeholder="이메일"
               value={values.email}
               onChange={handleChange}
             />
-            <label htmlFor="password">PASSWORD</label>
+
             <input
               id="password"
               name="password"
               type="password"
+              placeholder="비밀번호"
               value={values.password}
               onChange={handleChange}
             />
