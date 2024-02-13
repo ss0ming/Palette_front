@@ -15,7 +15,7 @@ function ProjectSummary() {
     })
     .map((project) => (
       <Link to={`/ProjectInformation/${project.slug}`} key={project.projectId}>
-        <div>
+        <div className={styles.projectSummary}>
           <img
             className={styles.photo}
             alt="img"
