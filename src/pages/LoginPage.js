@@ -34,7 +34,7 @@ function LoginPage() {
   return (
     <>
       <div className={styles.loginPage}>
-        <h1 className={styles.header}>로그인</h1>
+        <h1 className={styles.header}>로그인 &#128274;</h1>
         <section className={styles.formLogin}>
           <form onSubmit={handleSubmit}>
             <input

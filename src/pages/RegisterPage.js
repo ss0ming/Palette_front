@@ -58,7 +58,7 @@ function RegisterPage() {
   return (
     <>
       <div className={styles.loginPage}>
-        <h1 className={styles.header}>회원가입</h1>
+        <h1 className={styles.header}>회원가입 &#128075;</h1>
         <section className={styles.formLogin}>
           <form onSubmit={handleSubmit}>
             <input
