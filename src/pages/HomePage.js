@@ -55,7 +55,7 @@ function HomePage() {
 
         <main className={styles.main}>
           <h3>현재 구인중인 프로젝트들</h3>
-          <div style={{ display: "flex" }}>
+          <div className={styles.projectSummary}>
             <ProjectSummaryHome />
           </div>
         </main>

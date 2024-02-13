@@ -35,7 +35,7 @@ body {
   margin: 40px;
 }
 
-.ProjectSummary {
+.projectSummary {
   display: flex;
   justify-content: space-around;
 }
