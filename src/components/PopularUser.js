@@ -14,8 +14,8 @@ function PopularUser() {
       } else return 0;
     })
     .map((project) => (
-      <Link to={`/ProjectInformation/${project.slug}`}>
-        <div key={project.projectId}>
+      <Link to={`/ProjectInformation/${project.slug}`} key={project.projectId}>
+        <div className={styles.likeUser}>
           <img
             className={styles.photo}
             alt="img"
