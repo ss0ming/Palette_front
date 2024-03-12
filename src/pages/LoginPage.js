@@ -3,6 +3,7 @@ import axios from "../lib/axios";
 import styles from "./LoginPage.module.css";
 import { useNavigate } from "react-router-dom";
 import HorizonLine from "../components/HorizontalLine";
+import { AltRoute } from "@mui/icons-material";
 
 function LoginPage() {
   const [values, setValues] = useState({
@@ -23,8 +24,22 @@ function LoginPage() {
   async function handleSubmit(e) {
     e.preventDefault();
     const { email, password } = values;
-    await axios.post("/auth/login", { email, password });
-    navigate("/MyPage");
+
+    try {
+      const response = await axios.post("/member/login", { email, password });
+      const accessToken = response.data.accessToken;
+      const refreshToken = response.data.refreshToken;
+
+      //로컬 스토리지에 토큰 저장
+      localStorage.setItem("accssToken", accessToken);
+      localStorage.setItem("refreshToken", refreshToken);
+
+      //로그인 후 마이페이지로 이동
+      // navigate("/MyPage");
+      alert("로그인 성공");
+    } catch (error) {
+      alert("로그인 실패");
+    }
   }
 
   const handleKakaoLoginClick = () => {

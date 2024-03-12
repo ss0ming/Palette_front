@@ -34,7 +34,7 @@ function RegisterPage() {
     const { name, email, password, passwordRepeat } = values;
     try {
       const response = await axios.post(
-        "/users",
+        "/member/register",
         { name, email, password, passwordRepeat },
         {
           headers: {
