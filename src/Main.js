@@ -8,6 +8,8 @@ import MyPage from "./pages/MyPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import KakaoRedirectPage from "./pages/KakaoRedirectPage";
+import QuestionPage from "./pages/question/ListPage";
+import QuestionRead from "./pages/question/ReadPage";
 
 function Main() {
   return (
@@ -17,6 +19,9 @@ function Main() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/ProjectList" element={<ProjectListPage />} />
+          <Route path="/Question" element={<QuestionPage />} />
+          <Route path="/Question/list" element={<QuestionPage />} />
+          <Route path="/Question/read/:qno" element={<QuestionRead />} />
           <Route path="/RegisterProject" element={<RegisterProject />} />
           <Route
             path="/ProjectInformation/:projectSlug"
