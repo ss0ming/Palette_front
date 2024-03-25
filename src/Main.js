@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import HomePage from "./pages/HomePage";
 import ProjectListPage from "./pages/ProjectListPage";
+import RegisterProject from "./components/RegisterProject";
 import ProjectInformationPage from "./pages/ProjectInformationPage";
 import MyPage from "./pages/MyPage";
 import LoginPage from "./pages/LoginPage";
@@ -16,6 +17,7 @@ function Main() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/ProjectList" element={<ProjectListPage />} />
+          <Route path="/RegisterProject" element={<RegisterProject />} />
           <Route
             path="/ProjectInformation/:projectSlug"
             element={<ProjectInformationPage />}

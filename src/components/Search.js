@@ -16,6 +16,7 @@ import InputBase from "@mui/material/InputBase";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
+import { useNavigate } from "react-router-dom";
 
 /**검색 부분*/
 function Search() {
@@ -45,15 +46,22 @@ function Search() {
     setViews(event.target.value);
   }
 
+  const navigate = useNavigate();
+  function moveToResisterProject() {
+    navigate("/RegisterProject");
+  }
+
   const result = s
     .filter((project) => {
       if (search === "") {
         return project;
       } else if (project.title.toLowerCase().includes(search.toLowerCase())) {
         return project;
-      } else if (project.publisher.toLowerCase().includes(search.toLowerCase())) {
+      } else if (
+        project.publisher.toLowerCase().includes(search.toLowerCase())
+      ) {
         return project;
-      }else return 0;
+      } else return 0;
     })
     .filter((project) => {
       if (region === "") {
@@ -237,6 +245,7 @@ function Search() {
             className={styles.button}
             label="Searchbtn"
             variant="contained"
+            color="secondary"
           >
             검색
           </Button>
@@ -245,6 +254,8 @@ function Search() {
             className={styles.button2}
             label="프로젝트 등록하기"
             variant="contained"
+            color="secondary"
+            onClick={moveToResisterProject}
           >
             프로젝트 등록하기
           </Button>
