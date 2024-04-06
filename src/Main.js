@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import ProjectListPage from "./pages/ProjectListPage";
 import RegisterProject from "./components/RegisterProject";
 import ProjectInformationPage from "./pages/ProjectInformationPage";
+import ProjectDetail from "./components/ProjectDetail";
 import MyPage from "./pages/MyPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
@@ -23,10 +24,7 @@ function Main() {
           <Route path="/Question/list" element={<QuestionPage />} />
           <Route path="/Question/read/:qno" element={<QuestionRead />} />
           <Route path="/RegisterProject" element={<RegisterProject />} />
-          <Route
-            path="/ProjectInformation/:projectSlug"
-            element={<ProjectInformationPage />}
-          />
+          <Route path="/ProjectInformation/:idx" element={<ProjectDetail />} />
           <Route path="/MyPage" element={<MyPage />} />
           <Route path="/LoginPage" element={<LoginPage />} />
           <Route
