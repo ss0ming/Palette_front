@@ -1,7 +1,28 @@
 import React from "react";
 import styles from "./Project.module.css";
+import axios from "../lib/axios";
+import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Project = ({ title, content }) => {
+  const navigate = useNavigate();
+  const { idx } = useParams();
+
+  //수정 화면으로 이동
+  const moveToUpdate = () => {
+    navigate(`/UpdateProject/${idx}`);
+  };
+
+  //게시글 삭제하기
+  const deleteProject = async () => {
+    if (window.confirm("게시글을 삭제하시겠습니까?")) {
+      await axios.delete(`/api/posts/${idx}`).then((res) => {
+        alert("삭제되었습니다.");
+        navigate("/ProjectList");
+      });
+    }
+  };
+
   return (
     <>
       <div className={styles.projectInformation}>
@@ -56,6 +77,16 @@ const Project = ({ title, content }) => {
             </div>
           </div>
         </main>
+        <footer>
+          <div className={styles.inner}>
+            <button onClick={moveToUpdate} className={styles.btn}>
+              수정
+            </button>
+            <button onClick={deleteProject} className={styles.btn}>
+              삭제
+            </button>
+          </div>
+        </footer>
       </div>
     </>
   );

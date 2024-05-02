@@ -1,14 +1,23 @@
-import { useState } from "react";
-import styles from "./RegisterProject.module.css";
-import defaultProjectImg from "../assets/DefaultProjectImg.jpg";
+import React from "react";
 import axios from "../lib/axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import styles from "./UpdateProject.module.css";
 
-function RegisterProject() {
+const UpdateProject = () => {
   const navigate = useNavigate();
-  //프로젝트 배경이미지
-  const [defaultProjectImgSrc, setDefaultProjectImgSrc] =
-    useState(defaultProjectImg);
+  const { idx } = useParams();
+  const [project, setProject] = useState({});
+
+  //게시글 데이터 가져오기
+  const getProject = async () => {
+    const response = await axios.get(`/api/posts/${idx}`);
+    setProject(response.data);
+  };
+
+  useEffect(() => {
+    getProject();
+  }, []);
 
   const [projectInfo, setProjectInfo] = useState({
     title: "",
@@ -47,24 +56,22 @@ function RegisterProject() {
     });
   };
 
-  const postProject = async () => {
-    await axios.post(`/api/posts`, projectInfo).then((res) => {
-      alert("등록되었습니다.");
-      navigate("/ProjectList");
-    });
+  const updateProject = async () => {};
+
+  const cancel = async () => {
+    navigate("/ProjectList");
   };
 
   return (
     <>
       <div className={styles.RegisterProjectHeader}>
         <header>
-          <h1>프로젝트 등록하기</h1>
+          <h1>프로젝트 수정하기</h1>
         </header>
       </div>
       <main className={styles.RegisterProjectMain}>
         <div className={styles.projectImg}>
           <h3>배경사진 선택</h3>
-          <img alt="profileImg" src={defaultProjectImgSrc} />
           <input type="file"></input>
         </div>
         <div className={styles.projectName}>
@@ -108,11 +115,16 @@ function RegisterProject() {
           <h3>기타 참고사항</h3>
         </div>
         <div>
-          <button onClick={postProject}>등록하기</button>
+          <button onClick={updateProject} className={styles.btn}>
+            수정
+          </button>
+          <button onClick={cancel} className={styles.btn}>
+            삭제
+          </button>
         </div>
       </main>
     </>
   );
-}
+};
 
-export default RegisterProject;
+export default UpdateProject;
